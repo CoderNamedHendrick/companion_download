@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirect download url</title>
+</head>
+<body>
+<script>
+    function redirectToPlatformStore() {
+        const userAgent = navigator.userAgent;
+        if (/android/i.test(userAgent)) {
+            window.location.href = 'https://play.google.com/store/apps/details?id=com.faith.companion.app&pcampaignid=web_share'
+        } else if (/iphone|ipad|ipod|mac os/i.test(userAgent)) {
+            window.location.href = 'https://apps.apple.com/ng/app/faith-companion/id6479662568';
+        } else {
+            console.log("Unknown Device");
+        }
+    }
+
+    redirectToPlatformStore()
+</script>
+</body>
+</html>
